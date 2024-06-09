@@ -99,7 +99,7 @@ public class AdminChart extends javax.swing.JFrame {
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VoteSystem/icons8_increase_100px_1.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pemira/icons8_increase_100px_1.png"))); // NOI18N
 
         jLabel5.setFont(new java.awt.Font("Prompt ExtraBold", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -222,11 +222,7 @@ public class AdminChart extends javax.swing.JFrame {
             
             dataHashMap.clear();
             dataHashMap.put("Paslon 1", SEL1_QTY);
-            dataHashMap.put("Paslon 2", SEL2_QTY);
-//            dataHashMap.put("Domino's", SEL3_QTY);
-//            dataHashMap.put("Pizza Hut", SEL4_QTY);
-//            dataHashMap.put("Burger Lab", SEL5_QTY);
-//            dataHashMap.put("Subway", SEL6_QTY);        
+            dataHashMap.put("Paslon 2", SEL2_QTY);      
    
             DefaultCategoryDataset dcd = new DefaultCategoryDataset();
             Set keys = dataHashMap.keySet();

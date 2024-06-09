@@ -5,7 +5,7 @@
  */
 package pemira;
 
-import VoteSystem.VoterOptions;
+import pemira.VoterOptions;
 import javax.swing.JOptionPane;
 
 /**
@@ -48,7 +48,7 @@ public class TerminateVoting extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 0, 102));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VoteSystem/icons8_cancel_delete_100px.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pemira/icons8_cancel_delete_100px.png"))); // NOI18N
 
         jLabel11.setFont(new java.awt.Font("Prompt ExtraBold", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));

@@ -347,9 +347,9 @@ static String dname, dnim, dage, dtingkat, dkelas, demail, dcand;
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("CALON KETUA DAN WAKIL KETUA BEM STIS 2024/2025");
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VoteSystem/paslon1a.png"))); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pemira/paslon1a.png"))); // NOI18N
 
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VoteSystem/paslon2.png"))); // NOI18N
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pemira/paslon2.png"))); // NOI18N
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel12.setText("No .1");
@@ -438,7 +438,7 @@ static String dname, dnim, dage, dtingkat, dkelas, demail, dcand;
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VoteSystem/icons8_show_permit_card_100px.png"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pemira/icons8_show_permit_card_100px.png"))); // NOI18N
 
         jLabel11.setFont(new java.awt.Font("Prompt ExtraBold", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));

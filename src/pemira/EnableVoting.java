@@ -50,7 +50,7 @@ public class EnableVoting extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 102));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VoteSystem/icons8_elections_100px.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pemira/icons8_elections_100px.png"))); // NOI18N
 
         jLabel39.setFont(new java.awt.Font("Prompt ExtraBold", 1, 18)); // NOI18N
         jLabel39.setForeground(new java.awt.Color(255, 255, 255));

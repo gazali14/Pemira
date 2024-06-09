@@ -47,7 +47,7 @@ public class AdminOptions extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 102));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VoteSystem/icons8_features_list_95px.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pemira/icons8_features_list_95px.png"))); // NOI18N
 
         jLabel5.setFont(new java.awt.Font("Prompt ExtraBold", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -84,11 +84,11 @@ public class AdminOptions extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VoteSystem/icons8_bar_chart_3d_40px.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pemira/icons8_bar_chart_3d_40px.png"))); // NOI18N
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VoteSystem/icons8_save_40px.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pemira/icons8_save_40px.png"))); // NOI18N
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VoteSystem/icons8_cancel_subscription_40px_1.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pemira/icons8_cancel_subscription_40px_1.png"))); // NOI18N
 
         ena.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
         ena.setForeground(new java.awt.Color(49, 49, 49));
@@ -99,7 +99,7 @@ public class AdminOptions extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VoteSystem/icons8_start_40px.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pemira/icons8_start_40px.png"))); // NOI18N
 
         jButton5.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
         jButton5.setForeground(new java.awt.Color(49, 49, 49));
@@ -184,7 +184,7 @@ public class AdminOptions extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(111, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 

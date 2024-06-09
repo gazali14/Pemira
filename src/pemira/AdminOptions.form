@@ -66,7 +66,7 @@
                   <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jLabel5" min="-2" pref="24" max="-2" attributes="0"/>
-                  <EmptySpace pref="111" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
               <Component id="jPanel2" alignment="1" max="32767" attributes="0"/>
           </Group>
@@ -76,7 +76,7 @@
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/VoteSystem/icons8_features_list_95px.png"/>
+              <Image iconType="3" name="/pemira/icons8_features_list_95px.png"/>
             </Property>
           </Properties>
         </Component>
@@ -212,21 +212,21 @@
             <Component class="javax.swing.JLabel" name="jLabel1">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/VoteSystem/icons8_bar_chart_3d_40px.png"/>
+                  <Image iconType="3" name="/pemira/icons8_bar_chart_3d_40px.png"/>
                 </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/VoteSystem/icons8_save_40px.png"/>
+                  <Image iconType="3" name="/pemira/icons8_save_40px.png"/>
                 </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/VoteSystem/icons8_cancel_subscription_40px_1.png"/>
+                  <Image iconType="3" name="/pemira/icons8_cancel_subscription_40px_1.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -247,7 +247,7 @@
             <Component class="javax.swing.JLabel" name="jLabel6">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/VoteSystem/icons8_start_40px.png"/>
+                  <Image iconType="3" name="/pemira/icons8_start_40px.png"/>
                 </Property>
               </Properties>
             </Component>

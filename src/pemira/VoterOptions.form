@@ -177,14 +177,14 @@
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/VoteSystem/icons8_bar_chart_3d_40px.png"/>
+                  <Image iconType="3" name="/pemira/icons8_bar_chart_3d_40px.png"/>
                 </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/VoteSystem/icons8_elections_50px_1.png"/>
+                  <Image iconType="3" name="/pemira/icons8_elections_50px_1.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -193,7 +193,7 @@
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/VoteSystem/icons8_features_list_95px.png"/>
+              <Image iconType="3" name="/pemira/icons8_features_list_95px.png"/>
             </Property>
           </Properties>
         </Component>
