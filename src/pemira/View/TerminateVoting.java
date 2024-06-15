@@ -7,6 +7,7 @@ package Pemira.View;
 
 import Pemira.View.VoterOptions;
 import javax.swing.JOptionPane;
+import pemira.Controller.TerminateVotingController;
 
 /**
  *
@@ -19,8 +20,11 @@ public class TerminateVoting extends javax.swing.JFrame {
     /**
      * Creates new form TerminateVoting
      */
+    private TerminateVotingController controller;
+
     public TerminateVoting() {
         initComponents();
+        controller = new TerminateVotingController(this);
     }
 
     /**
@@ -157,14 +161,16 @@ public class TerminateVoting extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void terminateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_terminateButtonActionPerformed
-        statebutton = false;
-        JOptionPane.showMessageDialog(null, "Voting has been successfully terminated");
+        controller.terminateVoting();
     }//GEN-LAST:event_terminateButtonActionPerformed
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
-        new AdminOptions().setVisible(true);
-        setVisible(false);
+        controller.navigateToAdminOptions();
     }//GEN-LAST:event_backButtonActionPerformed
+
+    public void showTerminationMessage() {
+        JOptionPane.showMessageDialog(this, "Voting has been successfully terminated");
+    }
 
     /**
      * @param args the command line arguments

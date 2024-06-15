@@ -23,6 +23,7 @@ public class VoterOptions extends javax.swing.JFrame {
      * Creates new form VoterOptions
      */
     private String username;
+    
     public VoterOptions() {
         initComponents();
     }
@@ -61,8 +62,10 @@ public class VoterOptions extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 204, 0));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
+        backToMainButton.setBackground(new java.awt.Color(255, 0, 0));
         backToMainButton.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
-        backToMainButton.setText("Kembali ke Laman Utama");
+        backToMainButton.setForeground(new java.awt.Color(255, 255, 255));
+        backToMainButton.setText("Log Out");
         backToMainButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backToMainButtonActionPerformed(evt);
@@ -70,7 +73,7 @@ public class VoterOptions extends javax.swing.JFrame {
         });
 
         toVoteButton.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
-        toVoteButton.setText("Mulai Memilih");
+        toVoteButton.setText("Mulai Voting");
         toVoteButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 toVoteButtonActionPerformed(evt);
@@ -134,20 +137,21 @@ public class VoterOptions extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Prompt ExtraBold", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("MENU");
+        jLabel5.setText("MENU VOTING ");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 94, Short.MAX_VALUE)
+                .addGap(12, 95, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(jLabel4)))
-                .addGap(94, 94, 94)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addGap(110, 110, 110))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addGap(82, 82, 82)))
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -177,7 +181,8 @@ public class VoterOptions extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void toVoteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toVoteButtonActionPerformed
-        VoterOptionsController controller = new VoterOptionsController(this,username);        
+        VoterOptionsController controller = new VoterOptionsController(this,username);
+        controller.navigateToVote();        
     }//GEN-LAST:event_toVoteButtonActionPerformed
 
     private void backToMainButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backToMainButtonActionPerformed
@@ -205,6 +210,9 @@ public class VoterOptions extends javax.swing.JFrame {
 
     public void showMessage(String message) {
         JOptionPane.showMessageDialog(this, message);
+    }
+    public void showVotingTerminatedMessage() {
+        JOptionPane.showMessageDialog(this, "Voting has been terminated", "Voting Termination", JOptionPane.INFORMATION_MESSAGE);
     }
 
 

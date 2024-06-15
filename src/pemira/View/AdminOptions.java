@@ -9,13 +9,17 @@ package Pemira.View;
  *
  * @author Dr. Naeem Aziz
  */
+import pemira.Controller.AdminOptionsController;
 public class AdminOptions extends javax.swing.JFrame {
-
+    private AdminOptionsController controller;
+    
     /**
      * Creates new form AdminOptions
      */
     public AdminOptions() {
         initComponents();
+        controller = new AdminOptionsController(this);
+        
     }
 
     /**
@@ -52,14 +56,14 @@ public class AdminOptions extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Prompt ExtraBold", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("OPTIONS");
+        jLabel5.setText("MENU ADMIN");
 
         jPanel2.setBackground(new java.awt.Color(255, 204, 0));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
         statschart.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
         statschart.setForeground(new java.awt.Color(49, 49, 49));
-        statschart.setText("Show Statistics");
+        statschart.setText("Tampilkan Statistik");
         statschart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 statschartActionPerformed(evt);
@@ -68,7 +72,7 @@ public class AdminOptions extends javax.swing.JFrame {
 
         viewRecords.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
         viewRecords.setForeground(new java.awt.Color(49, 49, 49));
-        viewRecords.setText("View Records");
+        viewRecords.setText("Lihat Hasil");
         viewRecords.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewRecordsActionPerformed(evt);
@@ -77,7 +81,7 @@ public class AdminOptions extends javax.swing.JFrame {
 
         terminate.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
         terminate.setForeground(new java.awt.Color(49, 49, 49));
-        terminate.setText("Terminate Voting");
+        terminate.setText("Hetikan Voting");
         terminate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 terminateActionPerformed(evt);
@@ -92,7 +96,7 @@ public class AdminOptions extends javax.swing.JFrame {
 
         enable.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
         enable.setForeground(new java.awt.Color(49, 49, 49));
-        enable.setText("Enable Voting");
+        enable.setText("Aktifkan Voting");
         enable.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 enableActionPerformed(evt);
@@ -101,9 +105,10 @@ public class AdminOptions extends javax.swing.JFrame {
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_start_40px.png"))); // NOI18N
 
+        returnMainPage.setBackground(new java.awt.Color(255, 0, 0));
         returnMainPage.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
-        returnMainPage.setForeground(new java.awt.Color(49, 49, 49));
-        returnMainPage.setText("Return to Main Page");
+        returnMainPage.setForeground(new java.awt.Color(255, 255, 255));
+        returnMainPage.setText("Log Out");
         returnMainPage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 returnMainPageActionPerformed(evt);
@@ -114,25 +119,22 @@ public class AdminOptions extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(57, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(enable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(terminate, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
-                            .addComponent(statschart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(viewRecords, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(57, 57, 57))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(returnMainPage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(86, 86, 86))))
+                    .addComponent(returnMainPage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(enable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(terminate, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
+                        .addComponent(statschart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(viewRecords, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(57, 57, 57))
         );
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {enable, returnMainPage, statschart, terminate});
@@ -204,31 +206,25 @@ public class AdminOptions extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void viewRecordsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewRecordsActionPerformed
-        new ViewRecords().setVisible(true);
-        setVisible(false);
+        controller.navigateToViewRecords();
     }//GEN-LAST:event_viewRecordsActionPerformed
 
     private void returnMainPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_returnMainPageActionPerformed
-        //back button
-          new MainPage().setVisible(true);
-          setVisible(false);
+        controller.navigateToMainPage();
     }//GEN-LAST:event_returnMainPageActionPerformed
 
     private void statschartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statschartActionPerformed
-        new AdminChart().setVisible(true);
-        setVisible(false);
+        controller.navigateToAdminChart();
     }//GEN-LAST:event_statschartActionPerformed
 
     private void terminateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_terminateActionPerformed
-          new TerminateVoting().setVisible(true);
-          setVisible(false);
+        controller.navigateToTerminateVoting();
     }//GEN-LAST:event_terminateActionPerformed
 
     private void enableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enableActionPerformed
-          new EnableVoting().setVisible(true);
-          setVisible(false);
+        controller.navigateToEnableVoting();
     }//GEN-LAST:event_enableActionPerformed
-
+    
     /**
      * @param args the command line arguments
      */

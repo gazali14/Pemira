@@ -1,25 +1,26 @@
 package pemira.Controller;
 
+import Pemira.Model.TerminateVotingModel;
 import Pemira.View.BarChart;
 import Pemira.View.MainPage;
-import Pemira.View.TerminateVoting;
 import Pemira.View.VoterInfo;
 import Pemira.View.VoterOptions;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
-import javax.swing.JOptionPane;
 import pemira.Model.VoterOptionsModel;
 
 public class VoterOptionsController {
     private VoterOptionsModel model;
     private VoterOptions view;
     private String username;
+    private TerminateVotingModel votingModel;
 
     public VoterOptionsController(VoterOptions view, String username) {
         this.model = new VoterOptionsModel();
         this.view = view;
         this.username = username;
+        this.votingModel = new TerminateVotingModel();
 
         // Attach listeners to the view's buttons
         this.view.addToVoteButtonListener(new ToVoteButtonListener());
@@ -31,19 +32,29 @@ public class VoterOptionsController {
     class ToVoteButtonListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            if (!TerminateVoting.statebutton) {
+            if (!votingModel.isVotingActive()) {
                 view.showMessage("Masa Voting telah berakhir");
             } else {
                 try {
                     if (model.hasUserAlreadyVoted(username)) {
                         view.showMessage("Anda telah melakukan voting");
                     } else {
-                        navigateToVoterInfo(username);
+                        navigateToVote(); // Call navigateToVote method
                     }
                 } catch (ClassNotFoundException | SQLException ex) {
-                    view.showMessage(ex.getMessage());
+                    view.showMessage("Error: " + ex.getMessage());
                 }
             }
+        }
+    }
+
+    // Method to navigate to the Voting Information view
+    public void navigateToVote() {
+        if (votingModel.isVotingActive()) {
+            new VoterInfo(username).setVisible(true);
+            view.setVisible(false);
+        } else {
+            view.showMessage("Masa Voting telah berakhir");
         }
     }
 
@@ -62,12 +73,7 @@ public class VoterOptionsController {
             navigateToStatsChart();
         }
     }
-    
-    public void navigateToVoterInfo(String username) {
-        new VoterInfo(username).setVisible(true);
-        view.setVisible(false);
-    }
-    
+
     // Method to navigate to the Main Page view
     public void navigateToMainPage() {
         new MainPage().setVisible(true);

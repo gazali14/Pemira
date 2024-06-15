@@ -6,11 +6,7 @@
 package Pemira.View;
 
 import java.awt.Color;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.ArrayList;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
@@ -21,6 +17,7 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
+import pemira.Model.AdminChartModel;
 
 /**
  *
@@ -28,14 +25,17 @@ import org.jfree.data.category.DefaultCategoryDataset;
  */
 public class AdminChart extends javax.swing.JFrame {
 
-    private HashMap dataHashMap = new HashMap();
-    int SEL1_QTY = 0, SEL2_QTY = 0, SEL3_QTY = 0, SEL4_QTY = 0, SEL5_QTY = 0, SEL6_QTY = 0;
+    private AdminChartModel model;
+    private HashMap<String, Integer> dataHashMap;
+
     /**
-     * Creates new form NewJFrame
+     * Creates new form AdminChart
      */
     public AdminChart() {
         initComponents();
-        this.showChart();
+        model = new AdminChartModel();
+        dataHashMap = new HashMap<>();
+        showChart();
     }
 
     /**
@@ -196,45 +196,21 @@ public class AdminChart extends javax.swing.JFrame {
     private javax.swing.JPanel jpnlBack;
     // End of variables declaration//GEN-END:variables
 
-    public void showChart(){
-        ArrayList<User> usersList = new ArrayList<>();
-        
-            try{
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/pemira","root","");
+    public void showChart() {
+        try {
+            dataHashMap = model.fetchData();
 
-            String sql = "SELECT candidate FROM voter";
-            Statement st=conn.createStatement();
-            ResultSet rset=st.executeQuery(sql);
-            User user;
-            while(rset.next()){
-                user = new User(rset.getString("candidate"));
-                usersList.add(user);
-                String cand = user.getcandidate();
-                if (cand.equalsIgnoreCase("Paslon 1")){
-                    ++SEL1_QTY;
-                }
-        
-                if (cand.equalsIgnoreCase("Paslon 2")){
-                    ++SEL2_QTY;
-                }
-            } //While END
-            
-            dataHashMap.clear();
-            dataHashMap.put("Paslon 1", SEL1_QTY);
-            dataHashMap.put("Paslon 2", SEL2_QTY);      
-   
             DefaultCategoryDataset dcd = new DefaultCategoryDataset();
-            Set keys = dataHashMap.keySet();
-            Iterator prodInfoItr = keys.iterator();            
+            Set<String> keys = dataHashMap.keySet();
+            Iterator<String> prodInfoItr = keys.iterator();
 
-            while (prodInfoItr.hasNext()){
-                String productName = (String) prodInfoItr.next();
-                int productQty = (int) dataHashMap.get(productName);
-                dcd.setValue(productQty, "Votes", productName);            
-            }            
-            
-            JFreeChart jchart = ChartFactory.createBarChart3D("Vote Report", "Candidates", "Total Votes", dcd, PlotOrientation.VERTICAL , true, true, false);
+            while (prodInfoItr.hasNext()) {
+                String productName = prodInfoItr.next();
+                int productQty = dataHashMap.get(productName);
+                dcd.setValue(productQty, "Votes", productName);
+            }
+
+            JFreeChart jchart = ChartFactory.createBarChart3D("Vote Report", "Candidates", "Total Votes", dcd, PlotOrientation.VERTICAL, true, true, false);
             CategoryPlot plot = jchart.getCategoryPlot();
             plot.setRangeGridlinePaint(Color.BLACK);
 
@@ -243,13 +219,9 @@ public class AdminChart extends javax.swing.JFrame {
             jpnlBack.add(chartpan);
             jpnlBack.updateUI();
             chartpan.setVisible(true);
-            
-            } //TRY END
-            
-        catch(Exception e){
+
+        } catch (ClassNotFoundException | SQLException e) {
             JOptionPane.showMessageDialog(null, e);
         }
     }
-
-
 }
