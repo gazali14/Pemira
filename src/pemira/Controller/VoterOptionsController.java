@@ -7,7 +7,6 @@ import Pemira.View.VoterInfo;
 import Pemira.View.VoterOptions;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.SQLException;
 import pemira.Model.VoterOptionsModel;
 
 public class VoterOptionsController {
@@ -22,33 +21,11 @@ public class VoterOptionsController {
         this.username = username;
         this.votingModel = new TerminateVotingModel();
 
-        // Attach listeners to the view's buttons
         this.view.addToVoteButtonListener(new ToVoteButtonListener());
         this.view.addBackToMainButtonListener(new BackToMainButtonListener());
         this.view.addStatschartButtonListener(new StatschartButtonListener());
     }
 
-    // ActionListener for the To Vote button
-    class ToVoteButtonListener implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            if (!votingModel.isVotingActive()) {
-                view.showMessage("Masa Voting telah berakhir");
-            } else {
-                try {
-                    if (model.hasUserAlreadyVoted(username)) {
-                        view.showMessage("Anda telah melakukan voting");
-                    } else {
-                        navigateToVote(); // Call navigateToVote method
-                    }
-                } catch (ClassNotFoundException | SQLException ex) {
-                    view.showMessage("Error: " + ex.getMessage());
-                }
-            }
-        }
-    }
-
-    // Method to navigate to the Voting Information view
     public void navigateToVote() {
         if (votingModel.isVotingActive()) {
             new VoterInfo(username).setVisible(true);
@@ -58,7 +35,21 @@ public class VoterOptionsController {
         }
     }
 
-    // ActionListener for the Back to Main button
+    class ToVoteButtonListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (!votingModel.isVotingActive()) {
+                view.showMessage("Masa Voting telah berakhir");
+            } else {
+                if (model.hasUserAlreadyVoted(username)) {
+                    view.showMessage("Anda telah melakukan voting");
+                } else {
+                    navigateToVote();
+                }
+            }
+        }
+    }
+
     class BackToMainButtonListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -66,7 +57,6 @@ public class VoterOptionsController {
         }
     }
 
-    // ActionListener for the Stats Chart button
     class StatschartButtonListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -74,15 +64,13 @@ public class VoterOptionsController {
         }
     }
 
-    // Method to navigate to the Main Page view
     public void navigateToMainPage() {
         new MainPage().setVisible(true);
-        view.setVisible(false); // Assuming `setVisible()` method exists in VoterOptions view
+        view.setVisible(false);
     }
 
-    // Method to navigate to the Stats Chart view
     public void navigateToStatsChart() {
         new BarChart().setVisible(true);
-        view.setVisible(false); // Assuming `setVisible()` method exists in VoterOptions view
+        view.setVisible(false);
     }
 }

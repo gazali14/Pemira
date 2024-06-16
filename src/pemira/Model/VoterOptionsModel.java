@@ -8,26 +8,33 @@ package pemira.Model;
  *
  * @author U53R
  */
+import pemira.Database.DatabaseConnection;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 public class VoterOptionsModel {
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/pemira";
-    private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "";
 
-    public boolean hasUserAlreadyVoted(String username) throws SQLException, ClassNotFoundException {
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-        String sql = "SELECT hasVoted FROM users WHERE username = ?";
-        PreparedStatement pst = conn.prepareStatement(sql);
-        pst.setString(1, username);
-        ResultSet rs = pst.executeQuery();
-        boolean hasVoted = rs.next() && rs.getBoolean("hasVoted");
-        conn.close();
-        return hasVoted;
+    public boolean hasUserAlreadyVoted(String username) {
+        try (Connection conn = DatabaseConnection.getConnection()) {
+            // Query SQL untuk memeriksa status hasVoted dari username tertentu
+            String sql = "SELECT hasVoted FROM users WHERE username = ?";
+            PreparedStatement pst = conn.prepareStatement(sql);
+            pst.setString(1, username);
+            ResultSet rs = pst.executeQuery();
+            if (rs.next()) {
+                boolean hasVoted = rs.getBoolean("hasVoted");
+                return hasVoted;
+            } else {
+                return false; // Return false jika tidak ada baris yang sesuai
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Koneksi database gagal: " + e.getMessage())    ;
+        }
+        return false;
     }
 }

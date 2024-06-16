@@ -2,7 +2,6 @@ package pemira.Controller;
 
 import Pemira.View.VoterInfo;
 import Pemira.View.VotingDone;
-import java.sql.SQLException;
 import pemira.Model.VoterInfoModel;
 
 public class VoterInfoController {
@@ -26,11 +25,11 @@ public class VoterInfoController {
         String email = view.getEmail();
         String candidate = view.getCandidate();
 
-        try {
-            model.vote(name, nim, age, tingkat, kelas, email, candidate, username);
-            new VotingDone(view,true ).setVisible(true);
-        } catch (SQLException e) {
-            view.showMessage("Error while voting: " + e.getMessage());
+        boolean voteSuccessful = model.vote(name, nim, age, tingkat, kelas, email, candidate, username);
+
+        if (voteSuccessful) {
+            new VotingDone(view, true,username).setVisible(true);
+            view.setVisible(false); // Hide the current view
         }
     }
 }

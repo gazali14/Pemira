@@ -28,11 +28,11 @@ public class AdminLoginController {
         String password = view.getPassword();
 
         if (model.authenticate(username, password)) {
-            view.showMessage("Login Successful!");
+            view.showMessage("Login berhasil!");
             new AdminOptions().setVisible(true); // Assuming AdminOptions is another JFrame
             view.setVisible(false);
         } else {
-            view.showMessage("Login Failed!");
+            view.showMessage("Login Gagal! Username atau password salah");
             view.clearFields();
         }
     }

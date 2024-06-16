@@ -58,11 +58,13 @@ public class BarChart extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jpnlBack.setBackground(new java.awt.Color(0, 0, 51));
-        jpnlBack.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Statistics", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jpnlBack.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Statistik Hasil Pemira", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
         jpnlBack.setLayout(new javax.swing.BoxLayout(jpnlBack, javax.swing.BoxLayout.LINE_AXIS));
 
+        back.setBackground(new java.awt.Color(255, 0, 0));
         back.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
-        back.setText("Return to Voter's Main Screen");
+        back.setForeground(new java.awt.Color(255, 255, 255));
+        back.setText("Kembali ke laman utama User");
         back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backActionPerformed(evt);
@@ -98,7 +100,7 @@ public class BarChart extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Prompt ExtraBold", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("STATISTICS");
+        jLabel5.setText("STATISTIK");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -168,7 +170,7 @@ public class BarChart extends javax.swing.JFrame {
             jpnlBack.add(chartPanel);
             jpnlBack.updateUI();
             chartPanel.setVisible(true);
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);
         }
     }

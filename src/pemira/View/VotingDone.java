@@ -10,14 +10,16 @@ package Pemira.View;
  * @author Hp
  */
 public class VotingDone extends javax.swing.JDialog {
-
+    private String username;
     /**
      * Creates new form VotingDone
      * @param parent
      * @param modal
+     * @param username
      */
-    public VotingDone(java.awt.Frame parent, boolean modal) {
+    public VotingDone(java.awt.Frame parent, boolean modal, String username) {
         super(parent, modal);
+        this.username = username;
         initComponents();
     }
 
@@ -53,8 +55,9 @@ public class VotingDone extends javax.swing.JDialog {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("TERIMA KASIH TELAH MENYALURKAN SUARA ANDA");
 
+        backButton.setBackground(new java.awt.Color(255, 0, 0));
         backButton.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
-        backButton.setForeground(new java.awt.Color(49, 49, 49));
+        backButton.setForeground(new java.awt.Color(255, 255, 255));
         backButton.setText("Kembali ke Menu Utama");
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -124,7 +127,7 @@ public class VotingDone extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
-        new VoterOptions().setVisible(true);
+        new VoterOptions(username).setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_backButtonActionPerformed
 
@@ -158,7 +161,7 @@ public class VotingDone extends javax.swing.JDialog {
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(() -> {
-            VotingDone dialog = new VotingDone(new javax.swing.JFrame(), true);
+            VotingDone dialog = new VotingDone(new javax.swing.JFrame(), true, "defaultUser");
             dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                 @Override
                 public void windowClosing(java.awt.event.WindowEvent e) {

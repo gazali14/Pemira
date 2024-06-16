@@ -32,7 +32,7 @@ public class ViewRecordsController {
                 tblModel.addRow(record);
             }
             view.populateTable(tblModel);
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (SQLException e) {
             JOptionPane.showMessageDialog(view, "Error loading records: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
@@ -64,7 +64,7 @@ public class ViewRecordsController {
                 }
 
                 csvWriter.flush();
-                JOptionPane.showMessageDialog(null, "Export successful!", "Information", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Ekspor data berhasil!", "Information", JOptionPane.INFORMATION_MESSAGE);
             } catch (IOException e) {
                 JOptionPane.showMessageDialog(null, "Error exporting data: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
             }

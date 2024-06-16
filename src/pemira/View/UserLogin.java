@@ -270,33 +270,8 @@ public class UserLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_passFieldActionPerformed
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
-        String user = userField.getText();
-
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/pemira", "root", "");
-            String sql = "select * from users where username=? and password=?";
-            PreparedStatement pst = con.prepareStatement(sql);
-            pst.setString(1, userField.getText());
-            pst.setString(2, passField.getText());
-            ResultSet rs = pst.executeQuery();
-
-            if (rs.next()) {
-                JOptionPane.showMessageDialog(null, "Login Successful!");
-                String username = userField.getText(); // Ambil username dari field input
-                new VoterOptions(username).setVisible(true); // Teruskan username saat membuat objek VoterInfo
-                setVisible(false);                
-            } else {
-                JOptionPane.showMessageDialog(null, "Login Failed!");
-                userField.setText("");
-                passField.setText("");
-                lbl1.setVisible(true);
-                lbl2.setVisible(true);
-            }
-            con.close();
-        } catch (ClassNotFoundException | SQLException | HeadlessException e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
+        UserLoginController controller = new UserLoginController(this);
+        controller.authenticate();
     
     }//GEN-LAST:event_loginButtonActionPerformed
 

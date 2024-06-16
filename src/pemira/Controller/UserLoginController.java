@@ -9,11 +9,8 @@ package pemira.Controller;
  * @author U53R
  */
 import Pemira.View.UserLogin;
-import Pemira.View.VoterInfo;
 import Pemira.View.VoterOptions;
-import java.sql.SQLException;
 import pemira.Model.UserLoginModel;
-
 import java.sql.SQLException;
 
 public class UserLoginController {
@@ -29,17 +26,13 @@ public class UserLoginController {
         String username = view.getUsername();
         String password = view.getPassword();
 
-        try {
-            if (model.authenticate(username, password)) {
-                view.showMessage("Login Successful!");
-                new VoterOptions(username).setVisible(true); // Assuming VoterOptions is another JFrame
-                view.setVisible(false);
-            } else {
-                view.showMessage("Login Failed!");
-                view.clearFields();
-            }
-        } catch (ClassNotFoundException | SQLException e) {
-            view.showMessage(e.getMessage());
+        if (model.authenticate(username, password)) {
+            view.showMessage("Login berhasil!");
+            new VoterOptions(username).setVisible(true); // Assuming VoterOptions is another JFrame
+            view.setVisible(false);
+        } else {
+            view.showMessage("Login Gagal! Username atau password salah");
+            view.clearFields();
         }
     }
 }

@@ -55,7 +55,7 @@ public class EnableVoting extends javax.swing.JFrame {
         jLabel39.setFont(new java.awt.Font("Prompt ExtraBold", 1, 18)); // NOI18N
         jLabel39.setForeground(new java.awt.Color(255, 255, 255));
         jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel39.setText("ENABLE VOTING");
+        jLabel39.setText("AKTIFKAN VOTING");
 
         jPanel2.setBackground(new java.awt.Color(255, 204, 0));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -70,14 +70,16 @@ public class EnableVoting extends javax.swing.JFrame {
 
         jLabel40.setFont(new java.awt.Font("Raleway ExtraBold", 0, 12)); // NOI18N
         jLabel40.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel40.setText("By this action, you will enable voters to access");
+        jLabel40.setText("Dengan menekan tombol Aktifkan, Voter akan");
 
         jLabel41.setFont(new java.awt.Font("Raleway ExtraBold", 0, 12)); // NOI18N
         jLabel41.setForeground(new java.awt.Color(255, 255, 255));
         jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel41.setText("and perform voting-specific actions.");
+        jLabel41.setText("diizinkan untuk melakukan voting");
 
+        backButtton.setBackground(new java.awt.Color(255, 0, 0));
         backButtton.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
+        backButtton.setForeground(new java.awt.Color(255, 255, 255));
         backButtton.setText("Kembali ke Laman Utama");
         backButtton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,7 +133,7 @@ public class EnableVoting extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(29, 29, 29)
                         .addComponent(jLabel1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -161,7 +163,7 @@ public class EnableVoting extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void enableButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enableButtonActionPerformed
-        TerminateVoting.statebutton = true;
+        TerminateVoting.stateButton = true;
         JOptionPane.showMessageDialog(null, "Voting has been enabled");
         
     }//GEN-LAST:event_enableButtonActionPerformed

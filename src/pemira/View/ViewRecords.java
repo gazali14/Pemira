@@ -150,8 +150,10 @@ public class ViewRecords extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        exportButton.setBackground(new java.awt.Color(0, 0, 204));
         exportButton.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
-        exportButton.setText("Export Data");
+        exportButton.setForeground(new java.awt.Color(255, 255, 255));
+        exportButton.setText("Ekspor Data");
         exportButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exportButtonActionPerformed(evt);

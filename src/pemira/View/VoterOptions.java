@@ -181,8 +181,7 @@ public class VoterOptions extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void toVoteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toVoteButtonActionPerformed
-        VoterOptionsController controller = new VoterOptionsController(this,username);
-        controller.navigateToVote();        
+        VoterOptionsController controller = new VoterOptionsController(this,username);     
     }//GEN-LAST:event_toVoteButtonActionPerformed
 
     private void backToMainButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backToMainButtonActionPerformed
