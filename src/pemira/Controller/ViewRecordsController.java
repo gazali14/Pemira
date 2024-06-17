@@ -1,5 +1,10 @@
 package Pemira.Controller;
 
+/**
+ *
+ * @author Gazali
+ */
+
 import Pemira.Model.ViewRecordsModel;
 import Pemira.View.ViewRecords;
 import javax.swing.*;

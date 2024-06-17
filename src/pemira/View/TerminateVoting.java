@@ -1,25 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Pemira.View;
+
+/**
+ *
+ * @author Gazali
+ */
+
 
 import Pemira.View.VoterOptions;
 import javax.swing.JOptionPane;
 import pemira.Controller.TerminateVotingController;
 
-/**
- *
- * @author Dr. Naeem Aziz
- */
 public class TerminateVoting extends javax.swing.JFrame {
     
     public static boolean stateButton=true;
-
-    /**
-     * Creates new form TerminateVoting
-     */
     private TerminateVotingController controller;
 
     public TerminateVoting() {

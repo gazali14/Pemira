@@ -1,9 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Pemira.View;
+
+/**
+ *
+ * @author Gazali
+ */
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -20,11 +20,6 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
 import Pemira.Controller.ViewRecordsController;
 
-
-/**
- *
- * @author U53R
- */
 public class ViewRecords extends javax.swing.JFrame {
 
     /**

@@ -1,5 +1,10 @@
 package pemira.Controller;
 
+/**
+ *
+ * @author Gazali
+ */
+
 import Pemira.View.VoterInfo;
 import Pemira.View.VotingDone;
 import pemira.Model.VoterInfoModel;

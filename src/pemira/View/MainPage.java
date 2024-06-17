@@ -28,8 +28,8 @@ public class MainPage extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        voterButton = new javax.swing.JButton();
-        javax.swing.JButton adminButton = new javax.swing.JButton();
+        voterLoginButton = new javax.swing.JButton();
+        javax.swing.JButton adminLoginButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -49,19 +49,19 @@ public class MainPage extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
-        voterButton.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
-        voterButton.setText("Login sebagai Pemilih");
-        voterButton.addActionListener(new java.awt.event.ActionListener() {
+        voterLoginButton.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
+        voterLoginButton.setText("Login sebagai Pemilih");
+        voterLoginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                voterButtonActionPerformed(evt);
+                voterLoginButtonActionPerformed(evt);
             }
         });
 
-        adminButton.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
-        adminButton.setText("Login sebagai Admin");
-        adminButton.addActionListener(new java.awt.event.ActionListener() {
+        adminLoginButton.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
+        adminLoginButton.setText("Login sebagai Admin");
+        adminLoginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                adminButtonActionPerformed(evt);
+                adminLoginButtonActionPerformed(evt);
             }
         });
 
@@ -80,8 +80,8 @@ public class MainPage extends javax.swing.JFrame {
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, jLabel3))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                    .add(voterButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(adminButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE))
+                    .add(voterLoginButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(adminLoginButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE))
                 .addContainerGap(57, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -91,10 +91,10 @@ public class MainPage extends javax.swing.JFrame {
                 .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
                     .add(jPanel2Layout.createSequentialGroup()
                         .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                            .add(adminButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(adminLoginButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(jLabel2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                         .add(18, 18, 18)
-                        .add(voterButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .add(voterLoginButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                     .add(jLabel3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(127, Short.MAX_VALUE))
         );
@@ -170,15 +170,15 @@ public class MainPage extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void adminButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminButtonActionPerformed
+    private void adminLoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminLoginButtonActionPerformed
         new Adminlogin().setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_adminButtonActionPerformed
+    }//GEN-LAST:event_adminLoginButtonActionPerformed
 
-    private void voterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voterButtonActionPerformed
+    private void voterLoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voterLoginButtonActionPerformed
         new UserLogin().setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_voterButtonActionPerformed
+    }//GEN-LAST:event_voterLoginButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -220,7 +220,7 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JButton voterButton;
+    private javax.swing.JButton voterLoginButton;
     // End of variables declaration//GEN-END:variables
 
 }

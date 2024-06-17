@@ -1,5 +1,10 @@
 package pemira.Controller;
 
+/**
+ *
+ * @author Gazali
+ */
+
 import Pemira.Model.TerminateVotingModel;
 import Pemira.View.BarChart;
 import Pemira.View.MainPage;

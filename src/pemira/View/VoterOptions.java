@@ -1,9 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Pemira.View;
+
+/**
+ *
+ * @author Gazali
+ */
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -14,10 +14,6 @@ import javax.swing.JOptionPane;
 import java.awt.event.ActionListener;
 import pemira.Controller.VoterOptionsController;
 
-/**
- *
- * @author Hp
- */
 public class VoterOptions extends javax.swing.JFrame {
     /**
      * Creates new form VoterOptions

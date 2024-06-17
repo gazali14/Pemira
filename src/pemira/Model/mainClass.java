@@ -1,4 +1,9 @@
-package Images;
+package pemira.Model;
+
+/**
+ *
+ * @author Gazali
+ */
 
 import Pemira.View.MainPage;
 

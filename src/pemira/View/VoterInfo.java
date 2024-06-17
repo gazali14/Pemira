@@ -1,10 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Pemira.View;
 
+/**
+ *
+ * @author Gazali
+ */
 
 import javax.swing.text.MaskFormatter;
 import java.util.regex.Matcher;
@@ -14,10 +13,6 @@ import javax.swing.ComboBoxModel;
 import javax.swing.JOptionPane;
 import pemira.Controller.VoterInfoController;
 
-/**
- *
- * @author Hp
- */
 public class VoterInfo extends javax.swing.JFrame {
     MaskFormatter mf, af;
     String[] jComboBox1 ={"Tingkat 1", "Tingkat 2", "Tingkat 3", "Tingkat 4"};
@@ -60,7 +55,6 @@ public class VoterInfo extends javax.swing.JFrame {
         kelasField = new javax.swing.JTextField();
         emailField = new javax.swing.JTextField();
         invalidmail = new javax.swing.JLabel();
-        invalidage = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -170,11 +164,6 @@ public class VoterInfo extends javax.swing.JFrame {
                 invalidmail.setText("Email tidak valid");
                 invalidmail.setVisible(false);
 
-                invalidage.setFont(new java.awt.Font("Raleway ExtraBold", 0, 12)); // NOI18N
-                invalidage.setForeground(new java.awt.Color(255, 255, 255));
-                invalidage.setText("Age must be greater than 18");
-                invalidage.setVisible(false);
-
                 jLabel1.setFont(new java.awt.Font("Raleway ExtraBold", 0, 12)); // NOI18N
                 jLabel1.setForeground(new java.awt.Color(255, 255, 255));
                 jLabel1.setText("Nama");
@@ -282,20 +271,16 @@ public class VoterInfo extends javax.swing.JFrame {
                         .addGap(2, 2, 2)))
                 .addGap(45, 45, 45)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(invalidage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(invalidmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(72, 72, 72))
-                            .addComponent(namaField)
-                            .addComponent(nimField)
-                            .addComponent(ageField)
-                            .addComponent(kelasField)
-                            .addComponent(emailField)
-                            .addComponent(tingkatComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(3, 3, 3)))
-                .addGap(50, 50, 50))
+                        .addComponent(invalidmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(72, 72, 72))
+                    .addComponent(namaField)
+                    .addComponent(nimField)
+                    .addComponent(ageField)
+                    .addComponent(kelasField)
+                    .addComponent(emailField)
+                    .addComponent(tingkatComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(53, 53, 53))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -312,23 +297,24 @@ public class VoterInfo extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(ageField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(invalidage)
-                .addGap(19, 19, 19)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel4))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(tingkatComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(tingkatComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
+                    .addComponent(kelasField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(kelasField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(invalidmail)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         candidatesComboBox.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
@@ -684,7 +670,6 @@ public class VoterInfo extends javax.swing.JFrame {
     private javax.swing.JButton backButton;
     private javax.swing.JComboBox<String> candidatesComboBox;
     private javax.swing.JTextField emailField;
-    private javax.swing.JLabel invalidage;
     private javax.swing.JLabel invalidmail;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

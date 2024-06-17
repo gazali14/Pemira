@@ -1,4 +1,10 @@
 package Pemira.View;
+
+/**
+ *
+ * @author Gazali
+ */
+
 import Pemira.Controller.AdminLoginController;
 import java.awt.HeadlessException;
 import javax.swing.JOptionPane;
@@ -8,15 +14,8 @@ import java.awt.event.WindowEvent;
 import java.sql.*;
 import java.nio.charset.StandardCharsets;
 
-/**
- *
- * @author U5ER
- */
 public class Adminlogin extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Adminlogin
-     */
     public Adminlogin() {
         initComponents();
         

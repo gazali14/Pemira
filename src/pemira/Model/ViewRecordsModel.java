@@ -1,5 +1,10 @@
 package Pemira.Model;
 
+/**
+ *
+ * @author Gazali
+ */
+
 import pemira.Database.DatabaseConnection;
 import java.sql.Connection;
 import java.sql.ResultSet;

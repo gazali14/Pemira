@@ -119,12 +119,12 @@
                       </Group>
                       <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="returnMainPage" linkSize="1" max="32767" attributes="0"/>
+                          <Component id="returnMainPageButton" linkSize="1" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="enable" linkSize="1" max="32767" attributes="0"/>
-                              <Component id="terminate" linkSize="1" pref="163" max="32767" attributes="0"/>
-                              <Component id="statschart" linkSize="1" max="32767" attributes="0"/>
-                              <Component id="viewRecords" alignment="0" max="32767" attributes="0"/>
+                              <Component id="enableButton" linkSize="1" max="32767" attributes="0"/>
+                              <Component id="terminateButton" linkSize="1" pref="163" max="32767" attributes="0"/>
+                              <Component id="statsChartButton" linkSize="1" max="32767" attributes="0"/>
+                              <Component id="viewRecordsButton" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
@@ -136,33 +136,33 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="statschart" linkSize="2" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="statsChartButton" linkSize="2" min="-2" pref="40" max="-2" attributes="0"/>
                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="viewRecords" linkSize="2" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="viewRecordsButton" linkSize="2" min="-2" pref="40" max="-2" attributes="0"/>
                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="terminate" linkSize="2" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="terminateButton" linkSize="2" min="-2" pref="40" max="-2" attributes="0"/>
                           <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="enable" linkSize="2" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="enableButton" linkSize="2" min="-2" pref="40" max="-2" attributes="0"/>
                           <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                      <Component id="returnMainPage" linkSize="2" min="-2" max="-2" attributes="0"/>
+                      <Component id="returnMainPageButton" linkSize="2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="statschart">
+            <Component class="javax.swing.JButton" name="statsChartButton">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Raleway SemiBold" size="12" style="0"/>
@@ -173,10 +173,10 @@
                 <Property name="text" type="java.lang.String" value="Tampilkan Statistik"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="statschartActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="statsChartButtonActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="viewRecords">
+            <Component class="javax.swing.JButton" name="viewRecordsButton">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Raleway SemiBold" size="12" style="0"/>
@@ -187,10 +187,10 @@
                 <Property name="text" type="java.lang.String" value="Lihat Hasil"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="viewRecordsActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="viewRecordsButtonActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="terminate">
+            <Component class="javax.swing.JButton" name="terminateButton">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Raleway SemiBold" size="12" style="0"/>
@@ -201,7 +201,7 @@
                 <Property name="text" type="java.lang.String" value="Hetikan Voting"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="terminateActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="terminateButtonActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel1">
@@ -225,7 +225,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="enable">
+            <Component class="javax.swing.JButton" name="enableButton">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Raleway SemiBold" size="12" style="0"/>
@@ -236,7 +236,7 @@
                 <Property name="text" type="java.lang.String" value="Aktifkan Voting"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="enableActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="enableButtonActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel6">
@@ -246,7 +246,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="returnMainPage">
+            <Component class="javax.swing.JButton" name="returnMainPageButton">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="ff" type="rgb"/>
@@ -260,7 +260,7 @@
                 <Property name="text" type="java.lang.String" value="Log Out"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="returnMainPageActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="returnMainPageButtonActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

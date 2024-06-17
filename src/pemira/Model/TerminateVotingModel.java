@@ -1,5 +1,10 @@
 package Pemira.Model;
 
+/**
+ *
+ * @author Gazali
+ */
+
 public class TerminateVotingModel {
     private static boolean votingState = true; // true means voting is active
 

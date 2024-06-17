@@ -1,5 +1,10 @@
 package Pemira.View;
 
+/**
+ *
+ * @author Gazali
+ */
+
 import java.awt.Color;
 import java.sql.SQLException;
 import java.util.HashMap;
@@ -14,11 +19,6 @@ import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
 import pemira.Model.BarChartModel;
 
-
-/**
- *
- * @author Hp
- */
 public class BarChart extends javax.swing.JFrame {
     
     /**
@@ -44,7 +44,7 @@ public class BarChart extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jpnlBack = new javax.swing.JPanel();
-        back = new javax.swing.JButton();
+        backButton = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
@@ -61,13 +61,13 @@ public class BarChart extends javax.swing.JFrame {
         jpnlBack.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Statistik Hasil Pemira", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
         jpnlBack.setLayout(new javax.swing.BoxLayout(jpnlBack, javax.swing.BoxLayout.LINE_AXIS));
 
-        back.setBackground(new java.awt.Color(255, 0, 0));
-        back.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
-        back.setForeground(new java.awt.Color(255, 255, 255));
-        back.setText("Kembali ke laman utama User");
-        back.addActionListener(new java.awt.event.ActionListener() {
+        backButton.setBackground(new java.awt.Color(255, 0, 0));
+        backButton.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
+        backButton.setForeground(new java.awt.Color(255, 255, 255));
+        backButton.setText("Kembali ke laman utama User");
+        backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backActionPerformed(evt);
+                backButtonActionPerformed(evt);
             }
         });
 
@@ -82,7 +82,7 @@ public class BarChart extends javax.swing.JFrame {
                         .addComponent(jpnlBack, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(156, 156, 156))))
         );
         jPanel2Layout.setVerticalGroup(
@@ -91,7 +91,7 @@ public class BarChart extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jpnlBack, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
@@ -142,10 +142,10 @@ public class BarChart extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         new VoterOptions().setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_backActionPerformed
+    }//GEN-LAST:event_backButtonActionPerformed
     
     public void showChart() {
         try {
@@ -215,7 +215,7 @@ public class BarChart extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton back;
+    private javax.swing.JButton backButton;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;

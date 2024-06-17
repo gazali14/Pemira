@@ -124,8 +124,8 @@
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="voterButton" max="32767" attributes="0"/>
-                          <Component id="adminButton" pref="163" max="32767" attributes="0"/>
+                          <Component id="voterLoginButton" max="32767" attributes="0"/>
+                          <Component id="adminLoginButton" pref="163" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace pref="57" max="32767" attributes="0"/>
                   </Group>
@@ -138,11 +138,11 @@
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="adminButton" min="-2" pref="40" max="-2" attributes="0"/>
+                                  <Component id="adminLoginButton" min="-2" pref="40" max="-2" attributes="0"/>
                                   <Component id="jLabel2" min="-2" pref="40" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="voterButton" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="voterLoginButton" min="-2" pref="40" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jLabel3" min="-2" pref="40" max="-2" attributes="0"/>
                       </Group>
@@ -152,7 +152,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="voterButton">
+            <Component class="javax.swing.JButton" name="voterLoginButton">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Raleway SemiBold" size="12" style="0"/>
@@ -160,10 +160,10 @@
                 <Property name="text" type="java.lang.String" value="Login sebagai Pemilih"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="voterButtonActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="voterLoginButtonActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="adminButton">
+            <Component class="javax.swing.JButton" name="adminLoginButton">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Raleway SemiBold" size="12" style="0"/>
@@ -171,7 +171,7 @@
                 <Property name="text" type="java.lang.String" value="Login sebagai Admin"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="adminButtonActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="adminLoginButtonActionPerformed"/>
               </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>

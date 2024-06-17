@@ -1,14 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Pemira.View;
 
 /**
  *
- * @author Dr. Naeem Aziz
+ * @author Gazali
  */
+
 import pemira.Controller.AdminOptionsController;
 public class AdminOptions extends javax.swing.JFrame {
     private AdminOptionsController controller;
@@ -35,15 +31,15 @@ public class AdminOptions extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        statschart = new javax.swing.JButton();
-        viewRecords = new javax.swing.JButton();
-        terminate = new javax.swing.JButton();
+        statsChartButton = new javax.swing.JButton();
+        viewRecordsButton = new javax.swing.JButton();
+        terminateButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        enable = new javax.swing.JButton();
+        enableButton = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
-        returnMainPage = new javax.swing.JButton();
+        returnMainPageButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -61,30 +57,30 @@ public class AdminOptions extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 204, 0));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
-        statschart.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
-        statschart.setForeground(new java.awt.Color(49, 49, 49));
-        statschart.setText("Tampilkan Statistik");
-        statschart.addActionListener(new java.awt.event.ActionListener() {
+        statsChartButton.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
+        statsChartButton.setForeground(new java.awt.Color(49, 49, 49));
+        statsChartButton.setText("Tampilkan Statistik");
+        statsChartButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                statschartActionPerformed(evt);
+                statsChartButtonActionPerformed(evt);
             }
         });
 
-        viewRecords.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
-        viewRecords.setForeground(new java.awt.Color(49, 49, 49));
-        viewRecords.setText("Lihat Hasil");
-        viewRecords.addActionListener(new java.awt.event.ActionListener() {
+        viewRecordsButton.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
+        viewRecordsButton.setForeground(new java.awt.Color(49, 49, 49));
+        viewRecordsButton.setText("Lihat Hasil");
+        viewRecordsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                viewRecordsActionPerformed(evt);
+                viewRecordsButtonActionPerformed(evt);
             }
         });
 
-        terminate.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
-        terminate.setForeground(new java.awt.Color(49, 49, 49));
-        terminate.setText("Hetikan Voting");
-        terminate.addActionListener(new java.awt.event.ActionListener() {
+        terminateButton.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
+        terminateButton.setForeground(new java.awt.Color(49, 49, 49));
+        terminateButton.setText("Hetikan Voting");
+        terminateButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                terminateActionPerformed(evt);
+                terminateButtonActionPerformed(evt);
             }
         });
 
@@ -94,24 +90,24 @@ public class AdminOptions extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_cancel_subscription_40px_1.png"))); // NOI18N
 
-        enable.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
-        enable.setForeground(new java.awt.Color(49, 49, 49));
-        enable.setText("Aktifkan Voting");
-        enable.addActionListener(new java.awt.event.ActionListener() {
+        enableButton.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
+        enableButton.setForeground(new java.awt.Color(49, 49, 49));
+        enableButton.setText("Aktifkan Voting");
+        enableButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                enableActionPerformed(evt);
+                enableButtonActionPerformed(evt);
             }
         });
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_start_40px.png"))); // NOI18N
 
-        returnMainPage.setBackground(new java.awt.Color(255, 0, 0));
-        returnMainPage.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
-        returnMainPage.setForeground(new java.awt.Color(255, 255, 255));
-        returnMainPage.setText("Log Out");
-        returnMainPage.addActionListener(new java.awt.event.ActionListener() {
+        returnMainPageButton.setBackground(new java.awt.Color(255, 0, 0));
+        returnMainPageButton.setFont(new java.awt.Font("Raleway SemiBold", 0, 12)); // NOI18N
+        returnMainPageButton.setForeground(new java.awt.Color(255, 255, 255));
+        returnMainPageButton.setText("Log Out");
+        returnMainPageButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                returnMainPageActionPerformed(evt);
+                returnMainPageButtonActionPerformed(evt);
             }
         });
 
@@ -128,42 +124,42 @@ public class AdminOptions extends javax.swing.JFrame {
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(returnMainPage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(returnMainPageButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(enable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(terminate, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
-                        .addComponent(statschart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(viewRecords, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(enableButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(terminateButton, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
+                        .addComponent(statsChartButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(viewRecordsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(57, 57, 57))
         );
 
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {enable, returnMainPage, statschart, terminate});
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {enableButton, returnMainPageButton, statsChartButton, terminateButton});
 
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(46, 46, 46)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(statschart, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(statsChartButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(viewRecords, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(viewRecordsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(terminate, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(terminateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(enable, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(enableButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
                 .addGap(33, 33, 33)
-                .addComponent(returnMainPage)
+                .addComponent(returnMainPageButton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {enable, returnMainPage, statschart, terminate, viewRecords});
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {enableButton, returnMainPageButton, statsChartButton, terminateButton, viewRecordsButton});
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -205,25 +201,25 @@ public class AdminOptions extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void viewRecordsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewRecordsActionPerformed
+    private void viewRecordsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewRecordsButtonActionPerformed
         controller.navigateToViewRecords();
-    }//GEN-LAST:event_viewRecordsActionPerformed
+    }//GEN-LAST:event_viewRecordsButtonActionPerformed
 
-    private void returnMainPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_returnMainPageActionPerformed
+    private void returnMainPageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_returnMainPageButtonActionPerformed
         controller.navigateToMainPage();
-    }//GEN-LAST:event_returnMainPageActionPerformed
+    }//GEN-LAST:event_returnMainPageButtonActionPerformed
 
-    private void statschartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statschartActionPerformed
+    private void statsChartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statsChartButtonActionPerformed
         controller.navigateToAdminChart();
-    }//GEN-LAST:event_statschartActionPerformed
+    }//GEN-LAST:event_statsChartButtonActionPerformed
 
-    private void terminateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_terminateActionPerformed
+    private void terminateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_terminateButtonActionPerformed
         controller.navigateToTerminateVoting();
-    }//GEN-LAST:event_terminateActionPerformed
+    }//GEN-LAST:event_terminateButtonActionPerformed
 
-    private void enableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enableActionPerformed
+    private void enableButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enableButtonActionPerformed
         controller.navigateToEnableVoting();
-    }//GEN-LAST:event_enableActionPerformed
+    }//GEN-LAST:event_enableButtonActionPerformed
     
     /**
      * @param args the command line arguments
@@ -262,7 +258,7 @@ public class AdminOptions extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton enable;
+    private javax.swing.JButton enableButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -271,9 +267,9 @@ public class AdminOptions extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JButton returnMainPage;
-    private javax.swing.JButton statschart;
-    private javax.swing.JButton terminate;
-    private javax.swing.JButton viewRecords;
+    private javax.swing.JButton returnMainPageButton;
+    private javax.swing.JButton statsChartButton;
+    private javax.swing.JButton terminateButton;
+    private javax.swing.JButton viewRecordsButton;
     // End of variables declaration//GEN-END:variables
 }
