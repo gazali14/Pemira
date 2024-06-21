@@ -25,7 +25,7 @@ public class UserLoginController {
 
         if (model.authenticate(username, password)) {
             view.showMessage("Login berhasil!");
-            new VoterOptions(username).setVisible(true); // Assuming VoterOptions is another JFrame
+            new VoterOptions(username).setVisible(true);
             view.setVisible(false);
         } else {
             view.showMessage("Login Gagal! Username atau password salah");

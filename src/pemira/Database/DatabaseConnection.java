@@ -15,7 +15,7 @@ import java.sql.Statement;
  */
 public class DatabaseConnection {
     private static Connection con = null;
-    private static final String DATABASE_URL = "jdbc:sqlite:C:/Users/U53R/Documents/SQLite/pemira.db";
+    private static final String DATABASE_URL = "jdbc:sqlite:D:/POLSTAT STIS/Pemira/Pemira/src/pemira/Database/pemira.db";
 
     /**
      * Get the database connection.
